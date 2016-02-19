@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="400.0" prefWidth="400.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ContactsDialogController">
+   <children>
+      <Label fx:id="labelTitle" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="380.0" text="Наші дані: In Alto. Online IT academy. &#10;По всій території України і не тільки, тел. +380 (97) 468-07-41, &#10;E-mail: mail@inaltostudy.info, mykolakotsyuba@gmail.com&#10;www.inaltostudy.info" wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="labelQuestion" layoutX="10.0" layoutY="85.0" prefHeight="51.0" prefWidth="380.0" text="Є запитання? Хочете записатися на безкоштовний пробний урок? &#10;Тоді заповніть форму і ми Вам перетелефонуємо або дзвоніть самостійно +380 (97) 468- 07- 41." wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="85.0" />
+      <Label fx:id="labelName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="149.0" prefWidth="170.0" text="Ім'я, прізвище:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="149.0" />
+      <Label fx:id="labelEmail" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="184.0" prefWidth="170.0" text="E-mail:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="184.0" />
+      <Label fx:id="labelCourseName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="219.0" prefWidth="170.0" text="Назва курсу:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="219.0" />
+      <Label fx:id="labelMessage" layoutX="10.0" layoutY="249.0" prefWidth="170.0" text="Текст повідомлення:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="249.0" />
+      <TextField fx:id="textName" layoutX="190.0" layoutY="145.0" prefWidth="200.0" promptText="Введіть повне ім'я та прізвище" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="145.0" />
+      <TextField fx:id="textEmail" layoutX="190.0" layoutY="180.0" prefWidth="200.0" promptText="Введіть свій e-mail" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="180.0" />
+      <TextField fx:id="textCourseName" layoutX="190.0" layoutY="215.0" prefWidth="200.0" promptText="Введіть назву обраного курсу" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="215.0" />
+      <TextArea fx:id="textMessage" layoutX="10.0" layoutY="270.0" prefHeight="90.0" prefWidth="380.0" promptText="Введіть текст повідомлення" wrapText="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="270.0" />
+      <Button fx:id="sendButton" defaultButton="true" layoutX="100.0" layoutY="369.0" mnemonicParsing="false" onAction="#sendButton" prefWidth="80.0" text="Відправити" AnchorPane.bottomAnchor="6.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="220.0" layoutY="369.0" mnemonicParsing="false" onAction="#cancelButton" prefWidth="80.0" text="Відмінити" AnchorPane.bottomAnchor="6.0" />
+   </children>
+</fx:root>

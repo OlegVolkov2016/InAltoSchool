@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="235.0" prefWidth="400.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelCourseAuthor" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="12.0" prefWidth="170.0" text="Автор курсу:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="12.0" />
+      <Label fx:id="labelCourseName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="47.0" prefWidth="170.0" text="Назва курсу:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="47.0" />
+      <Label fx:id="labelGroups" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="132.0" prefWidth="170.0" text="Додати в групу:" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelStudents" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="167.0" prefWidth="170.0" text="Студенти:" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="10.0" />
+      <TextField fx:id="textCourseAuthor" editable="false" focusTraversable="false" layoutX="190.0" layoutY="10.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextArea fx:id="textCourseName" editable="false" focusTraversable="false" layoutX="190.0" layoutY="45.0" prefHeight="75.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" wrapText="true" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0" />
+      <ComboBox fx:id="comboGroups" layoutX="190.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <ComboBox fx:id="comboStudents" layoutX="190.0" layoutY="165.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="addButton" defaultButton="true" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#addButton" prefWidth="80.0" text="Додати" AnchorPane.bottomAnchor="10.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="220.0" layoutY="200.0" mnemonicParsing="false" onAction="#cancelButton" prefWidth="80.0" text="Відмінити" AnchorPane.bottomAnchor="10.0" />
+   </children>
+</fx:root>

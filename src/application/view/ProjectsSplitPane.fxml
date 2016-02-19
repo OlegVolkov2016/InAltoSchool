@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="551.0" prefWidth="800.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ProjectsSplitPaneController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="551.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="396.0">
+               <children>
+                  <Label fx:id="labelProjectTitle" layoutX="10.0" layoutY="13.0" prefWidth="120.0" text="Проекти школи:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="13.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelAuthors" alignment="CENTER_RIGHT" layoutX="146.0" layoutY="13.0" prefWidth="80.0" text="Автори:" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="13.0" />
+                  <ComboBox fx:id="comboAuthors" layoutX="236.0" layoutY="10.0" prefWidth="150.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <TableView fx:id="tableProjects" layoutX="5.0" layoutY="46.0" prefHeight="500.0" prefWidth="386.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="46.0">
+                    <columns>
+                      <TableColumn fx:id="columnProjectName" prefWidth="230.0" text="Назва проекту" />
+                      <TableColumn fx:id="columnProjectAuthor" prefWidth="156.0" text="Автор проекту" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane>
+               <children>
+                  <Label fx:id="labelInformation" layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="Інформація:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="10.0" layoutY="35.0" prefHeight="240.0" prefWidth="376.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0" />
+                  <Label fx:id="labelDetails" layoutX="20.0" layoutY="45.0" prefWidth="120.0" text="Опис проекту:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0" />
+                  <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="20.0" layoutY="70.0" prefHeight="160.0" prefWidth="356.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0" />
+                  <WebView fx:id="textDetails" layoutX="21.0" layoutY="71.0" prefHeight="158.0" prefWidth="354.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="71.0" />
+                  <Button fx:id="viewButton" disable="true" layoutX="138.0" layoutY="240.0" mnemonicParsing="false" onAction="#viewButton" prefWidth="120.0" text="Переглянути &gt;" visible="false" AnchorPane.topAnchor="240.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="10.0" layoutY="285.0" prefWidth="376.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="285.0" />
+                  <Label fx:id="labelStudents" layoutX="10.0" layoutY="295.0" prefWidth="80.0" text="Учасники:" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableStudents" layoutX="120.0" layoutY="295.0" prefHeight="200.0" prefWidth="266.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="295.0">
+                    <columns>
+                      <TableColumn fx:id="columnStudentName" prefWidth="164.0" text="Учасник" />
+                        <TableColumn fx:id="columnStudentDate" prefWidth="100.0" text="Дата початку" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Button fx:id="addButton" disable="true" layoutX="10.0" layoutY="322.0" mnemonicParsing="false" onAction="#addButton" prefWidth="80.0" text="Додати" visible="false" AnchorPane.leftAnchor="10.0" />
+                  <Button fx:id="removeButton" disable="true" layoutX="10.0" layoutY="357.0" mnemonicParsing="false" onAction="#removeButton" prefWidth="80.0" text="Видалити" visible="false" AnchorPane.leftAnchor="10.0" />
+                  <Button fx:id="statusButton" disable="true" layoutX="10.0" layoutY="392.0" mnemonicParsing="false" onAction="#statusButton" prefWidth="80.0" text="Статус" visible="false" AnchorPane.leftAnchor="10.0" />
+                  <Button fx:id="newButton" layoutX="10.0" layoutY="514.0" mnemonicParsing="false" onAction="#newButton" prefWidth="80.0" text="Новий..." visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  <Button fx:id="editButton" disable="true" layoutX="100.0" layoutY="514.0" mnemonicParsing="false" onAction="#editButton" prefWidth="80.0" text="Змінити..." visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="100.0" />
+                  <Button fx:id="deleteButton" disable="true" layoutX="190.0" layoutY="514.0" mnemonicParsing="false" onAction="#deleteButton" prefWidth="80.0" text="Видалити" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="190.0" />
+                  <Button fx:id="tasksButton" disable="true" layoutX="280.0" layoutY="514.0" mnemonicParsing="false" onAction="#tasksButton" prefWidth="100.0" text="Завдання &gt;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="280.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loginButton" layoutX="138.0" layoutY="514.0" mnemonicParsing="false" onAction="#loginButton" prefWidth="120.0" text="Авторизація &gt;" AnchorPane.bottomAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="10.0" layoutY="504.0" prefWidth="376.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</fx:root>

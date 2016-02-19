@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="620.0" prefWidth="620.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelProjectAuthor" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="12.0" prefWidth="170.0" text="Автор проекту:" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="12.0" />
+      <Label fx:id="labelProjectName" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="47.0" prefWidth="170.0" text="Назва проекту:" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="47.0" />
+      <Label fx:id="labelProjectDetails" layoutX="10.0" layoutY="75.0" prefWidth="170.0" text="Опис проекту:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="75.0" />
+      <TextField fx:id="textProjectAuthor" editable="false" focusTraversable="false" layoutX="310.0" layoutY="10.0" prefWidth="300.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="textProjectName" layoutX="310.0" layoutY="45.0" prefWidth="300.0" promptText="Введіть назву проекту" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0" />
+      <HTMLEditor fx:id="textProjectDetails" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="10.0" layoutY="100.0" prefHeight="480.0" prefWidth="600.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0" />
+      <Button fx:id="okButton" defaultButton="true" layoutX="210.0" layoutY="589.0" mnemonicParsing="false" onAction="#okButton" prefWidth="80.0" text="OK" AnchorPane.bottomAnchor="6.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="330.0" layoutY="589.0" mnemonicParsing="false" onAction="#cancelButton" prefWidth="80.0" text="Відмінити" AnchorPane.bottomAnchor="6.0" />
+   </children>
+</fx:root>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="370.0" prefWidth="400.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelProjectAuthor" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="12.0" prefWidth="170.0" text="Автор проекту:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="12.0" />
+      <Label fx:id="labelProjectName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="47.0" prefWidth="170.0" text="Назва проекту:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="47.0" />
+      <Label fx:id="labelStudent" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="132.0" prefWidth="170.0" text="Учасник:" AnchorPane.bottomAnchor="221.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelStartDate" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="167.0" prefWidth="170.0" text="Дата початку роботи:" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelEndDate" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="202.0" prefWidth="170.0" text="Дата закінчення роботи:" AnchorPane.bottomAnchor="151.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelResult" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="237.0" prefWidth="170.0" text="Результат (оцінка) автора:" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="10.0" />
+      <TextField fx:id="textProjectAuthor" editable="false" focusTraversable="false" layoutX="190.0" layoutY="10.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="textStudent" editable="false" focusTraversable="false" layoutX="190.0" layoutY="130.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textStartDate" editable="false" focusTraversable="false" layoutX="190.0" layoutY="165.0" prefWidth="200.0" promptText="Введіть дату початку" style="-fx-control-inner-background: whitesmoke;" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textEndDate" editable="false" focusTraversable="false" layoutX="190.0" layoutY="200.0" prefWidth="200.0" promptText="Введіть дату закінчення" style="-fx-control-inner-background: whitesmoke;" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textResult" editable="false" focusTraversable="false" layoutX="190.0" layoutY="235.0" prefWidth="200.0" promptText="Введіть результат (оцінку)" style="-fx-control-inner-background: whitesmoke;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextArea fx:id="textProjectName" editable="false" focusTraversable="false" layoutX="190.0" layoutY="45.0" prefHeight="75.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" wrapText="true" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0" />
+      <ScrollPane layoutX="10.0" layoutY="270.0" prefHeight="50.0" prefWidth="380.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <content>
+            <AnchorPane prefHeight="48.0" prefWidth="378.0">
+               <children>
+                  <Label fx:id="labelStatus" alignment="CENTER" layoutX="135.0" layoutY="3.0" prefWidth="100.0" text="Статус:" />
+                  <RadioButton fx:id="radioIssued" disable="true" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefWidth="80.0" selected="true" text="Надано">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleStatus" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioPerformed" layoutX="100.0" layoutY="27.0" mnemonicParsing="false" prefWidth="80.0" text="Прийнято" toggleGroup="$toggleStatus" />
+                  <RadioButton fx:id="radioChecked" layoutX="195.0" layoutY="27.0" mnemonicParsing="false" prefWidth="80.0" text="Виконано" toggleGroup="$toggleStatus" />
+                  <RadioButton fx:id="radioFinished" disable="true" layoutX="280.0" layoutY="27.0" mnemonicParsing="false" prefWidth="80.0" text="Закінчено" toggleGroup="$toggleStatus" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="okButton" defaultButton="true" layoutX="100.0" layoutY="335.0" mnemonicParsing="false" onAction="#okButton" prefWidth="80.0" text="ОК" AnchorPane.bottomAnchor="10.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="220.0" layoutY="335.0" mnemonicParsing="false" onAction="#cancelButton" prefWidth="80.0" text="Відмінити" AnchorPane.bottomAnchor="10.0" />
+   </children>
+</fx:root>

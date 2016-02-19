@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="600.0" prefWidth="800.0" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.RootLayoutController">
+   <top>
+      <MenuBar fx:id="mainMenu" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="aboutMenu" mnemonicParsing="false" text="Про нас">
+            <items>
+              <MenuItem fx:id="whoAreWeMenu" mnemonicParsing="false" onAction="#whoAreWeMenu" text="Хто ми?" />
+                  <MenuItem fx:id="advantagesMenu" mnemonicParsing="false" onAction="#advantagesMenu" text="Переваги співпраці з нами" />
+                  <MenuItem fx:id="contactsMenu" mnemonicParsing="false" onAction="#contactsMenu" text="Контакти" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exitMenu" mnemonicParsing="false" onAction="#exitMenu" text="Вихід" />
+            </items>
+          </Menu>
+          <Menu fx:id="educationMenu" mnemonicParsing="false" text="Навчання">
+            <items>
+              <MenuItem fx:id="coursesMenu" mnemonicParsing="false" onAction="#coursesMenu" text="Курси" />
+                  <MenuItem fx:id="projectsMenu" mnemonicParsing="false" onAction="#projectsMenu" text="Проекти" />
+            </items>
+          </Menu>
+          <Menu fx:id="usersMenu" mnemonicParsing="false" text="Учасники">
+            <items>
+              <MenuItem fx:id="teachersMenu" mnemonicParsing="false" onAction="#teachersMenu" text="Викладачі" />
+                  <MenuItem fx:id="studentsMenu" mnemonicParsing="false" onAction="#studentsMenu" text="Студенти" />
+            </items>
+          </Menu>
+            <Menu fx:id="loginMenu" mnemonicParsing="false" text="Логін">
+              <items>
+                <MenuItem fx:id="authorizationMenu" mnemonicParsing="false" onAction="#authorizationMenu" text="Авторизація" />
+                  <MenuItem fx:id="registrationMenu" mnemonicParsing="false" onAction="#registrationMenu" text="Реєстрація" />
+                  <MenuItem fx:id="editProfileMenu" disable="true" mnemonicParsing="false" onAction="#editProfileMenu" text="Редагувати профіль" />
+              </items>
+            </Menu>
+            <Menu fx:id="languageMenu" mnemonicParsing="false" text="Мова (Language)">
+               <items>
+                  <RadioMenuItem fx:id="languageUKMenu" mnemonicParsing="false" selected="true" text="Українська">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="languageToggle" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="languageENMenu" mnemonicParsing="false" text="English" toggleGroup="$languageToggle" />
+               </items>
+            </Menu>
+            <Menu fx:id="administrationMenu" mnemonicParsing="false" text="Адміністрування" visible="false">
+               <items>
+                  <MenuItem fx:id="usersTableMenu" mnemonicParsing="false" onAction="#usersTableMenu" text="Користувачі" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="24.0" prefWidth="800.0" spacing="10.0" style="-fx-border-width: 1px; -fx-border-color: darkgray;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="leftStatus" text="Авторизуйтесь або зареєструйтесь в системі" />
+            <Pane fx:id="paneStatus" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="rightStatus" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="15.0" text="© In Alto Study, 2016">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</fx:root>

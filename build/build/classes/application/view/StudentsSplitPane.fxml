@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="551.0" prefWidth="800.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.StudentsSplitPaneController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="551.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="396.0">
+               <children>
+                  <Label fx:id="labelUserTitle" layoutX="10.0" layoutY="10.0" prefWidth="200.0" text="Студенти і учасники школи:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableUsers" layoutX="5.0" layoutY="31.0" prefHeight="515.0" prefWidth="386.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="31.0">
+                    <columns>
+                      <TableColumn fx:id="columnFirstName" prefWidth="127.0" text="Ім'я" />
+                      <TableColumn fx:id="columnLastName" prefWidth="127.0" text="Прізвище" />
+                        <TableColumn fx:id="columnBirthday" prefWidth="130.0" text="Дата народження" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane>
+               <children>
+                  <Label fx:id="labelInformation" layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="Інформація:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="detailsButton" disable="true" layoutX="266.0" layoutY="5.0" mnemonicParsing="false" onAction="#detailsButton" prefWidth="120.0" text="Додатково &gt;" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="10.0" layoutY="35.0" prefWidth="376.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0" />
+                  <Label fx:id="labelCourseTitle" layoutX="10.0" layoutY="44.0" prefWidth="150.0" text="Курси школи:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="44.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="coursesToButton" layoutX="265.0" layoutY="40.0" mnemonicParsing="false" onAction="#coursesToButton" prefWidth="120.0" text="До курсу &gt;" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tableCourses" layoutX="10.0" layoutY="70.0" prefHeight="125.0" prefWidth="376.0" AnchorPane.bottomAnchor="354.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+                    <columns>
+                      <TableColumn fx:id="columnCourseName" prefWidth="154.0" text="Назва курсу" />
+                        <TableColumn fx:id="columnCourseGroup" prefWidth="60.0" text="Група" />
+                        <TableColumn fx:id="columnCourseDate" prefWidth="100.0" text="Дата початку" />
+                        <TableColumn fx:id="columnCourseLessons" prefWidth="60.0" text="Заняття" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Separator layoutX="10.0" layoutY="200.0" prefWidth="376.0" AnchorPane.bottomAnchor="346.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Label fx:id="labelCoursePayments" layoutX="10.0" layoutY="204.0" prefWidth="150.0" text="Оплати:" AnchorPane.bottomAnchor="328.0" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tablePayments" layoutX="10.0" layoutY="225.0" prefHeight="125.0" prefWidth="376.0" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="columnPaymentName" prefWidth="174.0" text="Назва курсу" />
+                        <TableColumn fx:id="columnPaymentDate" prefWidth="100.0" text="Дата оплати" />
+                        <TableColumn fx:id="columnPaymentSum" prefWidth="100.0" text="Сума оплати" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="newButton" disable="true" layoutX="10.0" layoutY="355.0" mnemonicParsing="false" onAction="#newButton" prefWidth="110.0" text="Новий..." AnchorPane.bottomAnchor="169.0" />
+                  <Button fx:id="editButton" disable="true" layoutX="145.0" layoutY="355.0" mnemonicParsing="false" onAction="#editButton" prefWidth="110.0" text="Змінити..." AnchorPane.bottomAnchor="169.0" />
+                  <Button fx:id="deleteButton" disable="true" layoutX="275.0" layoutY="355.0" mnemonicParsing="false" onAction="#deleteButton" prefWidth="110.0" text="Видалити" AnchorPane.bottomAnchor="169.0" />
+                  <Separator layoutX="10.0" layoutY="385.0" prefWidth="376.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Label fx:id="labelProjectTitle" layoutX="10.0" layoutY="394.0" prefWidth="150.0" text="Проекти школи:" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="projectsToButton" layoutX="265.0" layoutY="390.0" mnemonicParsing="false" onAction="#projectsToButton" prefWidth="120.0" text="До проекту &gt;" AnchorPane.bottomAnchor="134.0" AnchorPane.rightAnchor="11.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tableProjects" layoutX="10.0" layoutY="420.0" prefHeight="125.0" prefWidth="376.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="columnProjectName" prefWidth="274.0" text="Назва проекту" />
+                        <TableColumn fx:id="columnProjectDate" prefWidth="100.0" text="Дата початку" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</fx:root>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="551.0" prefWidth="800.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.CoursesSplitPaneController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="551.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="396.0">
+               <children>
+                  <Label fx:id="labelCourseTitle" layoutX="10.0" layoutY="13.0" prefWidth="120.0" text="Курси школи:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="13.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelAuthors" alignment="CENTER_RIGHT" layoutX="146.0" layoutY="13.0" prefWidth="80.0" text="Автори:" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="13.0" />
+                  <ComboBox fx:id="comboAuthors" layoutX="236.0" layoutY="10.0" prefWidth="150.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <TableView fx:id="tableCourses" layoutX="5.0" layoutY="46.0" prefHeight="500.0" prefWidth="386.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="46.0">
+                    <columns>
+                      <TableColumn fx:id="columnCourseName" prefWidth="230.0" text="Назва курсу" />
+                      <TableColumn fx:id="columnCourseAuthor" prefWidth="156.0" text="Автор курсу" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane>
+               <children>
+                  <Label fx:id="labelInformation" layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="Інформація:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="10.0" layoutY="35.0" prefHeight="240.0" prefWidth="376.0" />
+                  <Label fx:id="labelCourseGroupPrice" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="47.0" prefWidth="200.0" text="Вартість групового навчання:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="47.0" />
+                  <Label fx:id="labelCourseIndividualPrice" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="82.0" prefWidth="200.0" text="Вартість індивідуального навчання:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="82.0" />
+                  <Label fx:id="labelDetails" layoutX="20.0" layoutY="105.0" prefWidth="120.0" text="Опис курсу:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="105.0" />
+                  <TextField fx:id="textCourseGroupPrice" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="225.0" layoutY="45.0" prefWidth="150.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="45.0" />
+                  <TextField fx:id="textCourseIndividualPrice" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="225.0" layoutY="80.0" prefWidth="150.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="80.0" />
+                  <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="20.0" layoutY="130.0" prefHeight="110.0" prefWidth="356.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0" />
+                  <WebView fx:id="textDetails" layoutX="21.0" layoutY="131.0" prefHeight="108.0" prefWidth="354.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="131.0" />
+                  <Button fx:id="viewButton" disable="true" layoutX="138.0" layoutY="245.0" mnemonicParsing="false" onAction="#viewButton" prefWidth="120.0" text="Переглянути &gt;" AnchorPane.topAnchor="245.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="10.0" layoutY="285.0" prefWidth="376.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="285.0" />
+                  <Label fx:id="labelStudents" layoutX="10.0" layoutY="300.0" prefWidth="120.0" text="Групи і студенти:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="300.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TreeTableView fx:id="tableStudents" layoutX="140.0" layoutY="295.0" prefHeight="200.0" prefWidth="246.0" showRoot="false" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="295.0">
+                    <columns>
+                      <TreeTableColumn fx:id="columnStudentName" editable="false" prefWidth="144.0" text="Група або студент" />
+                        <TreeTableColumn fx:id="columnStudentDate" editable="false" prefWidth="100.0" text="Дата початку" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TreeTableView>
+                  <Button fx:id="newGroupButton" disable="true" layoutX="10.0" layoutY="327.0" mnemonicParsing="false" onAction="#newGroupButton" prefWidth="120.0" text="Створити групу" visible="false" />
+                  <Button fx:id="editGroupButton" disable="true" layoutX="10.0" layoutY="362.0" mnemonicParsing="false" onAction="#editGroupButton" prefWidth="120.0" text="Редагувати групу" visible="false" />
+                  <Button fx:id="addButton" disable="true" layoutX="10.0" layoutY="397.0" mnemonicParsing="false" onAction="#addButton" prefWidth="120.0" text="Додати студента" visible="false" />
+                  <Button fx:id="removeButton" disable="true" layoutX="10.0" layoutY="432.0" mnemonicParsing="false" onAction="#removeButton" prefWidth="120.0" text="Видалити" visible="false" />
+                  <Button fx:id="statusButton" disable="true" layoutX="10.0" layoutY="467.0" mnemonicParsing="false" onAction="#statusButton" prefWidth="120.0" text="Статус" visible="false" />
+                  <Separator layoutX="10.0" layoutY="504.0" prefWidth="376.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="newButton" layoutX="10.0" layoutY="514.0" mnemonicParsing="false" onAction="#newButton" prefWidth="80.0" text="Новий..." visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  <Button fx:id="editButton" disable="true" layoutX="100.0" layoutY="514.0" mnemonicParsing="false" onAction="#editButton" prefWidth="80.0" text="Змінити..." visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="100.0" />
+                  <Button fx:id="deleteButton" disable="true" layoutX="190.0" layoutY="514.0" mnemonicParsing="false" onAction="#deleteButton" prefWidth="80.0" text="Видалити" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="190.0" />
+                  <Button fx:id="lessonsButton" disable="true" layoutX="280.0" layoutY="514.0" mnemonicParsing="false" onAction="#lessonsButton" prefWidth="100.0" text="Уроки &gt;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="280.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loginButton" layoutX="138.0" layoutY="514.0" mnemonicParsing="false" onAction="#loginButton" prefWidth="120.0" text="Авторизація &gt;" AnchorPane.bottomAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</fx:root>

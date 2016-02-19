@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="600.0" prefWidth="400.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.RegistrationDialogController">
+   <children>
+      <Label fx:id="labelRoleName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="12.0" prefWidth="170.0" text="Роль користувача:" />
+      <ComboBox fx:id="comboRoles" disable="true" layoutX="190.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label fx:id="labelLogin" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="47.0" prefWidth="170.0" text="Логін користувача:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelPassword" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="82.0" prefWidth="170.0" text="Пароль користувача:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelPasswordRepeat" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="117.0" prefWidth="170.0" text="Повторіть пароль:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelQuestion" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="152.0" prefWidth="170.0" text="Контрольне питання:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelAnswer" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="187.0" prefWidth="170.0" text="Контрольна відповідь:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelFirstName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="222.0" prefWidth="170.0" text="Ім'я користувача:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelLastName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="257.0" prefWidth="170.0" text="Прізвище користувача:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelBirthday" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="292.0" prefWidth="170.0" text="Дата народження:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelAddress" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="327.0" prefWidth="170.0" text="Адреса:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelPhone" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="362.0" prefWidth="170.0" text="Телефон:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelEmail" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="397.0" prefWidth="170.0" text="Email:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelSkype" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="432.0" prefWidth="170.0" text="Skype:" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="labelDetails" layoutX="10.0" layoutY="454.0" prefWidth="170.0" text="Додаткова інформація:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="454.0" />
+      <TextField fx:id="textLogin" layoutX="190.0" layoutY="45.0" prefWidth="200.0" promptText="Введіть свій логін" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <PasswordField fx:id="textPassword" layoutX="190.0" layoutY="80.0" onKeyTyped="#changePassword" prefWidth="200.0" promptText="Введіть свій пароль" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <PasswordField fx:id="textPasswordRepeat" layoutX="190.0" layoutY="115.0" onKeyTyped="#changePassword" prefWidth="200.0" promptText="Повторіть свій пароль" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textQuestion" layoutX="190.0" layoutY="150.0" onKeyTyped="#changeAnswer" prefWidth="200.0" promptText="Введіть контрольне питання" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <PasswordField fx:id="textAnswer" layoutX="190.0" layoutY="185.0" onKeyTyped="#changeAnswer" prefWidth="200.0" promptText="Введіть контрольну відповідь" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textFirstName" layoutX="190.0" layoutY="220.0" prefWidth="200.0" promptText="Введіть своє ім'я" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textLastName" layoutX="190.0" layoutY="255.0" prefWidth="200.0" promptText="Введіть своє прізвище" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textBirthday" layoutX="190.0" layoutY="290.0" prefWidth="200.0" promptText="Введіть свою дату народження" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textAddress" layoutX="190.0" layoutY="325.0" prefWidth="200.0" promptText="Введіть свою адресу" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textPhone" layoutX="190.0" layoutY="360.0" prefWidth="200.0" promptText="Введіть свій телефон" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textEmail" layoutX="190.0" layoutY="395.0" prefWidth="200.0" promptText="Введіть свою адресу email" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="textSkype" layoutX="190.0" layoutY="430.0" prefWidth="200.0" promptText="Введіть свій логін Skype" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+      <TextArea fx:id="textDetails" layoutX="10.0" layoutY="475.0" prefHeight="85.0" prefWidth="380.0" promptText="Введіть додаткову інформацію" wrapText="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="475.0" />
+      <Button fx:id="okButton" defaultButton="true" layoutX="100.0" layoutY="569.0" mnemonicParsing="false" onAction="#okButton" prefWidth="80.0" text="ОК" AnchorPane.bottomAnchor="6.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="220.0" layoutY="569.0" mnemonicParsing="false" onAction="#cancelButton" prefWidth="80.0" text="Відмінити" AnchorPane.bottomAnchor="6.0" />
+   </children>
+</fx:root>

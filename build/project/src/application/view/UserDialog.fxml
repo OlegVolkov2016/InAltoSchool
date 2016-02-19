@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="400.0" prefWidth="400.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelFirstName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="12.0" prefWidth="170.0" text="Ім'я викладача:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="12.0" />
+      <Label fx:id="labelLastName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="47.0" prefWidth="170.0" text="Прізвище викладача:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="47.0" />
+      <Label fx:id="labelBirthday" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="82.0" prefWidth="170.0" text="Дата народження:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="82.0" />
+      <Label fx:id="labelAddress" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="117.0" prefWidth="170.0" text="Адреса:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="117.0" />
+      <Label fx:id="labelPhone" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="152.0" prefWidth="170.0" text="Телефон:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="152.0" />
+      <Label fx:id="labelEmail" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="187.0" prefWidth="170.0" text="Email:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="187.0" />
+      <Label fx:id="labelSkype" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="222.0" prefWidth="170.0" text="Skype:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="222.0" />
+      <Label fx:id="labelDetails" layoutX="10.0" layoutY="244.0" prefWidth="170.0" text="Додаткова інформація:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="244.0" />
+      <TextField fx:id="textFirstName" editable="false" focusTraversable="false" layoutX="190.0" layoutY="10.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="textLastName" editable="false" focusTraversable="false" layoutX="190.0" layoutY="45.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0" />
+      <TextField fx:id="textBirthday" editable="false" focusTraversable="false" layoutX="190.0" layoutY="80.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="textAddress" editable="false" focusTraversable="false" layoutX="190.0" layoutY="115.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="115.0" />
+      <TextField fx:id="textPhone" editable="false" focusTraversable="false" layoutX="190.0" layoutY="150.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="textEmail" editable="false" focusTraversable="false" layoutX="190.0" layoutY="185.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="185.0" />
+      <TextField fx:id="textSkype" editable="false" focusTraversable="false" layoutX="190.0" layoutY="220.0" prefWidth="200.0" style="-fx-control-inner-background: whitesmoke;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="220.0" />
+      <TextArea fx:id="textDetails" editable="false" focusTraversable="false" layoutX="10.0" layoutY="265.0" prefHeight="95.0" prefWidth="380.0" style="-fx-control-inner-background: whitesmoke;" wrapText="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="265.0" />
+      <Button fx:id="okButton" defaultButton="true" layoutX="160.0" layoutY="369.0" mnemonicParsing="false" onAction="#okButton" prefWidth="80.0" text="ОК" AnchorPane.bottomAnchor="6.0" />
+   </children>
+</fx:root>
